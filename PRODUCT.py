@@ -27,7 +27,7 @@ cheese=Product('cheese', '18.01.25', '180 days', 350, False)
 beer=Product('Zhigulevskoe', '15.01.25', '180 days', 100, False)
 water=Product('Narzan', '29.01.25', '100 days', 50, False)
 
-
+#Added a word
 
 def product_info(self):
     return f"{self.product_name},{self.delivery_data},{self.shelf_life},{self.price},{self.expired}"
