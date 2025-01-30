@@ -1,20 +1,24 @@
 from itertools import product
 
-class food_store:
-    def __init__(self, product):
-        self.product=product
-        self.products=[]
-
 class Product:
-    def __init__(self, product_name, delivery_data, shelf_life, price, expired=None):
+    def __init__(self, product_name, production_date, shelf_life, price, expired=None):
         self.product_name=product_name
-        self.delivery_data=delivery_data
+        self.production_date=production_date
         self.shelf_life=shelf_life
         self.price=price
         self.expired=False
 
 
 
+class Factory:
+    def make_product(self):
+        product_name = input('Enter the name for the product:')
+        production_date = input('Enter the production date for the product:')
+        shelf_life = input('Enter the shelf-life for the product:')
+        price = input('Enter the price of the product:')
+        expired = input('Expired?:')
+        nameoftheproduct = Product(product_name, production_date, shelf_life, price, expired)
+        return product
 
 
 milk=Product('milk', '20.01.25', '14 days', 90, False)
@@ -25,8 +29,7 @@ water=Product('Narzan', '29.01.25', '100 days', 50, False)
 
 
 def product_info(self):
-    return f"{self.product_name},{self.delivery_data},{self.shelf_life},{self.price},{self.expired}"
+    return f"{self.product_name},{self.production_date},{self.shelf_life},{self.price},{self.expired}"
 
 
 
-print(product_info(Product))
